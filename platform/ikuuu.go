@@ -10,7 +10,7 @@ import (
 type IKuuuVPN struct {
 }
 
-func (ik *IKuuuVPN) signIn(cookie string) (string, error) {
+func (IKuuuVPN *IKuuuVPN) signIn(cookie string) (string, error) {
 	url := "https://ikuuu.me/user/checkin"
 	req, err := http.NewRequest("POST", url, nil)
 	if err != nil {
@@ -50,7 +50,7 @@ func (ik *IKuuuVPN) signIn(cookie string) (string, error) {
 	return msg, nil
 }
 
-func (ik *IKuuuVPN) Run(pushPlusToken string, cookie string) {
+func (IKuuuVPN *IKuuuVPN) Run(pushPlusToken string, cookie string) {
 	var title = "ikuuu签到"
 	pushPlus := PushPlus{}
 
