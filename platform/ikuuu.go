@@ -48,6 +48,14 @@ func (IKuuuVPN *IKuuuVPN) signIn(cookie string) (string, error) {
 		return "", err
 	}
 
+	// 处理转义字符
+	body, err = strconv.Unquote(`"` + string(body) + `"`)
+	if err != nil {
+		fmt.Println("转义字符处理失败:", err)
+		return "", err
+	}
+
+
 	// 解析响应的 JSON 数据并提取签到结果
 	var resMap map[string]interface{}
 	err = json.Unmarshal(body, &resMap)
