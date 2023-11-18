@@ -28,7 +28,7 @@ func main() {
 	//}
 	if ikuuuCookies != "null" {
 		ikuuuCookieList := strings.Split(ikuuuCookies, ",")
-		iku := platform.ik{}
+		iku := platform.IKuuuVPN{}
 		for _, ikuuuCookie := range ikuuuCookieList {
 			iku.Run(pushPlusToken, ikuuuCookie)
 		}
