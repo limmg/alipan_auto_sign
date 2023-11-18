@@ -51,11 +51,11 @@ func (IKuuuVPN *IKuuuVPN) signIn(cookie string) (string, error) {
 	}
 
 	// 处理转义字符
-	body, err = strconv.Unquote(`"` + string(body) + `"`)
+	unescapedBody, err := strconv.Unquote(`"` + body + `"`)
 	if err != nil {
-		fmt.Println("转义字符处理失败:", err)
-		return "", err
+	    return "", err
 	}
+	body = unescapedBody
 
 
 	// 解析响应的 JSON 数据并提取签到结果
