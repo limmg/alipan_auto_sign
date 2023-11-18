@@ -11,6 +11,7 @@ func main() {
 	pushPlusToken := args[1]
 	refreshTokens := args[2]
 	bilibiliCookies := args[3]
+	ikuuuCookies := args[4]
 	if refreshTokens != "null" {
 		refreshTokenList := strings.Split(refreshTokens, ",")
 		aliCloudDisk := platform.AliCloudDisk{}
@@ -18,11 +19,18 @@ func main() {
 			aliCloudDisk.Run(pushPlusToken, refreshToken)
 		}
 	}
-	if bilibiliCookies != "null" {
-		bilibiliCookieList := strings.Split(bilibiliCookies, ",")
-		bilibili := platform.Bilibili{}
-		for _, bilibiliCookie := range bilibiliCookieList {
-			bilibili.Run(pushPlusToken, bilibiliCookie)
+	//if bilibiliCookies != "null" {
+	//	bilibiliCookieList := strings.Split(bilibiliCookies, ",")
+	//	bilibili := platform.Bilibili{}
+	//	for _, bilibiliCookie := range bilibiliCookieList {
+	//		bilibili.Run(pushPlusToken, bilibiliCookie)
+	//	}
+	//}
+	if ikuuuCookies != "null" {
+		ikuuuCookieList := strings.Split(ikuuuCookies, ",")
+		iku := platform.ik{}
+		for _, ikuuuCookie := range ikuuuCookieList {
+			iku.Run(pushPlusToken, ikuuuCookie)
 		}
 	}
 
