@@ -54,7 +54,7 @@ func (IKuuuVPN *IKuuuVPN) Run(pushPlusToken string, cookie string) {
 	var title = "ikuuu签到"
 	pushPlus := PushPlus{}
 
-	msg, err := ik.signIn(cookie)
+	msg, err := IKuuuVPN.signIn(cookie)
 	if err != nil {
 		pushPlus.Run(pushPlusToken, title, err.Error())
 	} else {
