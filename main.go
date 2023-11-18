@@ -10,7 +10,7 @@ func main() {
 	args := os.Args
 	pushPlusToken := args[1]
 	refreshTokens := args[2]
-	bilibiliCookies := args[3]
+	//bilibiliCookies := args[3]
 	ikuuuCookies := args[4]
 	if refreshTokens != "null" {
 		refreshTokenList := strings.Split(refreshTokens, ",")
