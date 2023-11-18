@@ -3,7 +3,6 @@ package platform
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -51,11 +50,11 @@ func (IKuuuVPN *IKuuuVPN) signIn(cookie string) (string, error) {
 	}
 
 	// 处理转义字符
-	unescapedBody, err := strconv.Unquote(`"` + body + `"`)
+	unescapedBody, err := strconv.Unquote(`"` + string(body) + `"`)
 	if err != nil {
 	    return "", err
 	}
-	body = unescapedBody
+	body = []byte(unescapedBody)
 
 
 	// 解析响应的 JSON 数据并提取签到结果
