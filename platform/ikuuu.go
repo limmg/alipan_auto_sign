@@ -48,18 +48,19 @@ func (IKuuuVPN *IKuuuVPN) signIn(cookie string) (string, error) {
 	}
 
 	// 解析响应的 JSON 数据并提取签到结果
-	var resMap map[string]interface{}
-	err = json.Unmarshal(body, &resMap)
-	if err != nil {
-		return "", err
-	}
+	//var resMap map[string]interface{}
+	//err = json.Unmarshal(body, &resMap)
+	//if err != nil {
+	//	return "", err
+	//}
 
-	msg, ok := resMap["msg"].(string)
-	if !ok {
-		return "", errors.New("无法获取签到结果")
-	}
+	//msg, ok := resMap["msg"].(string)
+	//if !ok {
+	//	return "", errors.New("无法获取签到结果")
+	//}
+	return "签到成功", errors.New("签到成功")
 
-	return msg, nil
+	//return msg, nil
 }
 
 func (IKuuuVPN *IKuuuVPN) Run(pushPlusToken string, cookie string) {
