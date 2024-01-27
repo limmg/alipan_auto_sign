@@ -11,7 +11,7 @@ func main() {
 	pushPlusToken := args[1]
 	refreshTokens := args[2]
 	//bilibiliCookies := args[3]
-	ikuuuCookies := args[4]
+	//ikuuuCookies := args[4]
 	if refreshTokens != "null" {
 		refreshTokenList := strings.Split(refreshTokens, ",")
 		aliCloudDisk := platform.AliCloudDisk{}
