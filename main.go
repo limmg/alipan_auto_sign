@@ -26,12 +26,12 @@ func main() {
 	//		bilibili.Run(pushPlusToken, bilibiliCookie)
 	//	}
 	//}
-	if ikuuuCookies != "null" {
-		ikuuuCookieList := strings.Split(ikuuuCookies, ",")
-		iku := platform.IKuuuVPN{}
-		for _, ikuuuCookie := range ikuuuCookieList {
-			iku.Run(pushPlusToken, ikuuuCookie)
-		}
+	//if ikuuuCookies != "null" {
+	//	ikuuuCookieList := strings.Split(ikuuuCookies, ",")
+	//	iku := platform.IKuuuVPN{}
+	//	for _, ikuuuCookie := range ikuuuCookieList {
+	//		iku.Run(pushPlusToken, ikuuuCookie)
+	//	}
 	}
 
 }
