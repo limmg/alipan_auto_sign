@@ -32,6 +32,6 @@ func main() {
 	//	for _, ikuuuCookie := range ikuuuCookieList {
 	//		iku.Run(pushPlusToken, ikuuuCookie)
 	//	}
-	}
+	//}
 
 }
